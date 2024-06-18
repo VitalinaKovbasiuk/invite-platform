@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react';
-import Particles from 'react-particles';
-import { loadFull } from 'tsparticles';
+import React, { useCallback } from "react";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
 
 // Interface definition for IRandom
 export interface IRandom {
@@ -24,9 +24,9 @@ const ParticlesLines = () => {
       loaded={particlesLoaded}
       options={{
         background: {
-          position: '50% 50%',
-          repeat: 'no-repeat',
-          size: 'cover',
+          position: "50% 50%",
+          repeat: "no-repeat",
+          size: "cover",
         },
         backgroundMask: {
           cover: {
@@ -48,11 +48,11 @@ const ParticlesLines = () => {
           events: {
             onClick: {
               enable: false,
-              mode: 'push',
+              mode: "push",
             },
             onHover: {
               enable: true,
-              mode: 'bubble',
+              mode: "bubble",
               parallax: {
                 force: 60,
               },
@@ -62,7 +62,7 @@ const ParticlesLines = () => {
             attract: {
               distance: 200,
               duration: 0.4,
-              easing: 'ease-out-quad',
+              easing: "ease-out-quad",
               factor: 1,
               maxSpeed: 50,
               speed: 1,
@@ -127,17 +127,17 @@ const ParticlesLines = () => {
               area: {
                 gradient: {
                   start: {
-                    value: '#ffffff',
+                    value: "#ffffff",
                   },
                   stop: {
-                    value: '#000000',
+                    value: "#000000",
                   },
                 },
                 radius: 1000,
               },
               shadow: {
                 color: {
-                  value: '#000000',
+                  value: "#000000",
                 },
                 length: 2000,
               },
@@ -146,7 +146,7 @@ const ParticlesLines = () => {
         },
         particles: {
           color: {
-            value: '#ffffff',
+            value: "#ffffff",
           },
           move: {
             attract: {
@@ -157,11 +157,11 @@ const ParticlesLines = () => {
             },
             enable: true,
             outModes: {
-              default: 'out', // Add the default property here
-              bottom: 'out',
-              left: 'out',
-              right: 'out',
-              top: 'out',
+              default: "out", // Add the default property here
+              bottom: "out",
+              left: "out",
+              right: "out",
+              top: "out",
             },
           },
           number: {
@@ -220,7 +220,7 @@ const ParticlesLines = () => {
               enable: false,
               value: 0,
             },
-            mode: 'vertical',
+            mode: "vertical",
             speed: 25,
           },
           tilt: {
@@ -235,7 +235,7 @@ const ParticlesLines = () => {
               decay: 0,
               sync: false,
             },
-            direction: 'clockwise',
+            direction: "clockwise",
             enable: false,
           },
           twinkle: {
@@ -280,7 +280,7 @@ const ParticlesLines = () => {
           links: {
             blink: false,
             color: {
-              value: '#ffffff',
+              value: "#ffffff",
             },
             consent: false,
             distance: 150,
@@ -290,7 +290,7 @@ const ParticlesLines = () => {
             shadow: {
               blur: 5,
               color: {
-                value: '#000',
+                value: "#000",
               },
               enable: false,
             },

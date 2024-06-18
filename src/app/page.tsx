@@ -1,31 +1,118 @@
-'use client'
+"use client";
 
+import React from "react";
 import { useRouter } from "next/navigation";
-// import  ParticlesLines  from '@/components/lines/ParticlesLines';
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import Icon from "@/components/IconComponent ";
+import * as icons from "./icons";
 
-export default function Home() {
+const Home = () => {
   const router = useRouter();
+  const contact = {
+    phone: "+38 (050) 123 45 67",
+    email: "+38 (050) 123 45 67",
+    website: "website.com",
+    location: "12345, Some st., New York, NY, United States",
+    socialMedia: [
+      { name: "instagram", url: "./icons/", icon: icons.Instagram },
+      { name: "facebook", url: "https://facebook.com", icon: icons.Instagram },
+      { name: "linkedin", url: "https://linkedin.com", icon: icons.Instagram },
+      { name: "tiktok", url: "https://tiktok.com", icon: icons.Instagram },
+    ],
+    imageUrl: "/images/jona2.jpg",
+  };
+
+  const { phone, email, website, location, socialMedia } = contact;
+
   return (
-    <main className="">
-     
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
-       
-          <h1 className="dark:text-shadow-d text-shadow-l leading-[1.2] text-amber-100 drop-shadow-2xl text-primary">
-          Hello in your Personalized invite Platform 
+    <main className="mx-auto px-5 w-full h-[942px] bg-black">
+      <div className=" max-w-sm mx-auto rounded-lg pt-[146px] my-12 shadow-md text-center bg-[#A23A77]">
+        {/* Foto */}
+        {/* <div className="w-35 h-35 absolute -top-[70px] rounded-[24px] overflow-hidden left-1/2 -translate-x-1/2 bg-white">
+          <Image
+
+            src={contact.imageUrl}
+            width={140}
+            height={140}
+            alt="Profile Image"
+          />
+        </div> */}
+
+        <div className="relative bg-white w-[350px] h-[528px] mb-[16px] rounded-[24px] mx-5 ">
+          <div className="w-[140px] h-[140px] absolute -top-[70px] rounded-[24px] overflow-hidden left-1/2 -translate-x-1/2 bg-white">
+            <Image
+              src={contact.imageUrl}
+              width={140}
+              height={140}
+              alt="Profile Image"
+            />
+          </div>
+          {/* Contact details section */}
+          <h1 className=" text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] mt-[86px]">
+            Jane Austin
           </h1>
-       
+          <h2 className="text-[14px]  text-[#707087]">CEO at Hogwarts</h2>
+
+          {/* Description */}
+          <p className="my-6 text-[14px] text-start text-[#011533] px-4 ">
+            Lorem ipsum dolor sit amet consectetur. Praesent massa pharetra
+            facilisis malesuada sem. Tellus erat rhoncus mauris eget eget
+            ridiculus enim. Augue aenean non tincidunt suscipit pellentesque.
+          </p>
+
+          {/* Contact */}
+
+          <ul className="text-left space-y-2 text-[#A23A77] px-6">
+            {[
+              { label: "Phone number:", value: phone },
+              { label: "Email:", value: email },
+              { label: "Website:", value: website, isLink: true },
+              { label: "Location:", value: location },
+            ].map((item, index) => (
+              <li key={index} className="text-[16px] pb-1 mb-4">
+                <strong>{item.label}</strong>
+                {item.isLink ? (
+                  <a
+                    href={item.value}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#011533] text-[14px]"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-[#011533] text-[14px]">{item.value}</p>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
-      
-      <button className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[100px] inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none   focus:ring-offset-2  bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400">
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        <span
-          className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-5 me-2 mb-2 text-lg font-bold text-black-900 z-10"
-          onClick={() => router.push("/create-invitation")}
-        >
-          Go to discover
-        </span>
-      </button>
-      
+
+        {/* Section social-media */}
+        <div className=" mt-2 w-[350px] h-[152px] bg-white rounded-[24px] mx-5">
+          <p className="text-[#A23A77] text-5 pt-5 px-[118px]">Social media</p>
+          <div className="icons flex">
+            {socialMedia.map((media, index) => (
+              <a
+                key={index}
+                href={media.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon className="w-[67.7px] h-[56px]" name={media.icon} />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Button */}
+        <button className="mt-4 bg-[#FFD3D7] text-gray-800 rounded-full mb-8 py-3 px-[94px] text-5 font-bold">
+          Save contact data
+        </button>
+      </div>
     </main>
   );
-}
+};
+
+export default Home;
