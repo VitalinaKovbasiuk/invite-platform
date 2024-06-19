@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const Instagram = ({ className }: any) => {
+const InstagramLogo = ({ className }: any) => {
   return (
     <svg
       width="51"
@@ -52,4 +52,4 @@ const Instagram = ({ className }: any) => {
   );
 };
 
-export default Instagram;
+export default InstagramLogo;

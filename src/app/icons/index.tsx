@@ -32,7 +32,16 @@ import VCardPlusIcon from "./VCardPlusIcon";
 import VideoIcon from "./VideoIcon";
 import WhatsApp from "./WhatsAppIcon";
 import WiFiIcon from "./WiFiIcon";
-import Instagram from "./WiFiIcon";
+import InstagramLogo from "./InstagramLogo";
+import FacebookLogo from "./FacebookLogo";
+import LinkedInLogo from "./LinkedInLogo";
+import TikTokLogo from "./TikTokLogo";
+import PhoneVector from "./PhoneVector";
+import EmailVector from "./EmailVector";
+import WebsiteVector from "./WebsiteVector";
+import LocationVector from "./LocationVector";
+import BatteryIcon from "./BatteryIcon";
+import WifiCardIcon from "./WifiCardIcon";
 
 export {
   ActionDotsIcon,
@@ -68,5 +77,14 @@ export {
   VideoIcon,
   WhatsApp,
   WiFiIcon,
-  Instagram,
+  InstagramLogo,
+  FacebookLogo,
+  LinkedInLogo,
+  TikTokLogo,
+  PhoneVector,
+  EmailVector,
+  WebsiteVector,
+  LocationVector,
+  BatteryIcon,
+  WifiCardIcon,
 };

@@ -1,29 +1,30 @@
 import { cn } from "@/lib/utils";
 
-const EmailVector = ({ className }: any) => {
+const LocationVector = ({ className }: any) => {
   return (
     <svg
-      width="26"
-      height="26"
+      width="27"
+      height="27"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
+        d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
         stroke="#A23A77"
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
-        d="M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z"
+        d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
         stroke="#A23A77"
         stroke-width="1.5"
         stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   );
 };
 
-export default EmailVector;
+export default LocationVector;

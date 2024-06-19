@@ -20,7 +20,8 @@ const config = {
     extend: {
       backgroundImage: {
         ava: "url('/images/jona2.jpg')",
-        gradient: "radial-gradient(var(--tw-gradient-stops))",
+        gradient1:
+          "linear-gradient(180deg, rgba(255,0,232,0) 15%, rgba(162,58,119,1) 15%)",
       },
       colors: {
         border: "hsl(var(--border))",
