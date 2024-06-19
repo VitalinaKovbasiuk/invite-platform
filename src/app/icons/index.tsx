@@ -42,6 +42,7 @@ import WebsiteVector from "./WebsiteVector";
 import LocationVector from "./LocationVector";
 import BatteryIcon from "./BatteryIcon";
 import WifiCardIcon from "./WifiCardIcon";
+import MobileSignalIcon from "./MobileSignalIcon";
 
 export {
   ActionDotsIcon,
@@ -87,4 +88,5 @@ export {
   LocationVector,
   BatteryIcon,
   WifiCardIcon,
+  MobileSignalIcon,
 };

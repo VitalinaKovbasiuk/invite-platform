@@ -16,7 +16,7 @@ const Home = () => {
     website: "website.com",
     location: "12345, Some st., New York, NY, United States",
     imageUrl: "/images/jona2.jpg",
-    blackSripe: "/images/blackStripe.png",
+    blackStripe: "/images/blackStripe.png",
   };
   const { phone, email, website, location } = contact;
 
@@ -56,7 +56,7 @@ const Home = () => {
   ];
 
   const cardIcon = [
-    { label: "WifiCardIcon", icon: icons.WifiCardIcon },
+    { label: "WifiCardIcon", icon: icons.MobileSignalIcon },
     { label: "WifiCardIcon", icon: icons.WifiCardIcon },
     { label: "BatteryIcon", icon: icons.BatteryIcon },
   ];
@@ -64,27 +64,70 @@ const Home = () => {
   const templates = {
     default: {
       cnMainDiv:
-        "relative max-w-sm mx-auto  w-[390px] h-[942px] my-12 shadow-md text-center bg-[#A23A77]",
+        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-[#A23A77]",
       cnImage: "/image/jona2.jpg",
       cnCoverImage: "/image/jona2.jpg",
+      cnImageJane:
+        "w-[140px] h-[140px] absolute top-[76px] rounded-[24px] overflow-hidden left-1/2 -translate-x-1/2",
+      cnName:
+        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[86px]",
       cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[102px]",
+      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+      cnButton:
+        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
     },
     template1: {
       cnMainDiv:
-        "relative max-w-sm mx-auto  w-[390px] h-[942px] my-12 shadow-md text-center bg-gradient1",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[102px]",
-      image: "image1",
-      radius: "radius1",
+        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient1 bgImg",
+      cnImageJane:
+        "w-[140px] h-[140px] absolute top-[120px] rounded-full border-[5px] overflow-hidden left-1/2 -translate-x-1/2",
+      cnName:
+        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[234px]",
+      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[0px] mx-5",
+      cnButton:
+        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 py-3 pl-[102px] pr-[102px] text-5 font-bold",
     },
-    template2: { bg: "bg2", image: "image2", radius: "radius3" },
-    template3: { bg: "bg3", image: "image3", radius: "radius3" },
-    template4: { bg: "bg4", image: "image4", radius: "radius4" },
+    template2: {
+      cnMainDiv:
+        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient1 bgImg",
+      cnImageJane:
+        "w-[140px] h-[140px] absolute top-[120px] rounded-full border-[5px] overflow-hidden left-1/2 -translate-x-1/2",
+      cnName:
+        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+      cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[234px]",
+      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+      cnButton:
+        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+    },
+    template3: {
+      cnMainDiv:
+        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient2 joBack",
+      cnImageJane: null,
+      cnName:
+        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[168px]",
+      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+      cnButton:
+        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[0px] py-3 px-[102px] text-5 font-bold",
+    },
+    template4: {
+      cnMainDiv:
+        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-[#A23A77]",
+      cnImageJane: null,
+      cnName:
+        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+      cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[168px]",
+      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+      cnButton:
+        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+    },
   };
 
-  const createTemplate = templates.template1;
+  const createTemplate = templates.template3;
 
   return (
-    <main className="mx-auto w-full ">
+    <main className=" mx-auto w-full ">
       <div className={cn(createTemplate.cnMainDiv)}>
         {/* Head of card */}
         <div>
@@ -92,12 +135,13 @@ const Home = () => {
             <p className="text-start text-[#FFFFFF] text-[15px]">9:41</p>
             <div className="top-0 absolute left-1/2 -translate-x-1/2">
               <Image
-                src={contact.blackSripe}
+                src={contact.blackStripe}
                 width={219}
                 height={30}
                 alt="Black Image"
               />
             </div>
+
             {/* List of card icon */}
             <ul className="flex gap-1 items-center">
               {cardIcon.map((item, index) => (
@@ -109,19 +153,21 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-[140px] h-[140px] absolute top-[72px] rounded-[24px] overflow-hidden left-1/2 -translate-x-1/2 bg-white">
-          <Image
-            src={contact.imageUrl}
-            width={140}
-            height={140}
-            alt="Profile Image"
-          />
-        </div>
+        {createTemplate !== templates.template3 &&
+          createTemplate !== templates.template4 && (
+            <div className={cn(createTemplate.cnImageJane)}>
+              <Image
+                src={contact.imageUrl}
+                width={140}
+                height={140}
+                alt="Profile Image"
+              />
+            </div>
+          )}
 
+        {/* Info Block */}
         <div className={cn(createTemplate.cnInfoBlock)}>
-          <h1 className=" text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[86px]">
-            Jane Austin
-          </h1>
+          <h1 className={cn(createTemplate.cnName)}>Jane Austin</h1>
           <h2 className="text-[14px] text-[#707087]">CEO at Hogwarts</h2>
 
           <p className="my-6 text-[14px] text-start text-[#011533] px-4 ">
@@ -130,9 +176,9 @@ const Home = () => {
             ridiculus enim. Augue aenean non tincidunt suscipit pellentesque.
           </p>
 
-          <ul className="text-left space-y-2 text-[#A23A77] px-4">
+          <ul className="text-left space-y-2 text-[#A23A77] px-4 pb-[40px]">
             {personalContact.map((item, index) => (
-              <li key={index} className="text-[16px] pb-1 mb-4 flex gap-2">
+              <li key={index} className="text-[16px] flex gap-2">
                 <Icon name={item.icon} />
                 <div>
                   <strong>{item.label}</strong>
@@ -143,9 +189,10 @@ const Home = () => {
           </ul>
         </div>
 
-        <div className=" mt-2 w-[350px] h-[152px] bg-white rounded-[24px] mx-5">
+        {/* Social madia Block */}
+        <div className={cn(createTemplate.cnSocialMedia)}>
           <p className="text-[#A23A77] text-5 pt-5 px-[118px]">Social media</p>
-          <div className="flex gap-2 px-[28px] mt-4 mb-8">
+          <div className="flex gap-2 px-[28px] pt-4 pb-8">
             {socialMedia.map((media, index) => (
               <Link
                 key={index}
@@ -161,7 +208,7 @@ const Home = () => {
           </div>
         </div>
 
-        <button className=" bg-[#FFD3D7] mt-4 mx-5 w-[350px] mb-8 text-gray-800 rounded-full py-3 px-[94px] text-5 font-bold">
+        <button className={cn(createTemplate.cnButton)}>
           Save contact data
         </button>
       </div>

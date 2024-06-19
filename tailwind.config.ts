@@ -19,9 +19,13 @@ const config = {
     },
     extend: {
       backgroundImage: {
+        bgCloud: "url('/images/bgCloud.jpg')",
+        joBack: "url('/images/joBack.jpg')",
         ava: "url('/images/jona2.jpg')",
         gradient1:
-          "linear-gradient(180deg, rgba(255,0,232,0) 15%, rgba(162,58,119,1) 15%)",
+          "linear-gradient(180deg, rgba(255,0,232,0) 17%, rgba(162,58,119,1) 16%)",
+        gradient2:
+          " linear-gradient(0deg, rgba(162,58,119,1) 30%, rgba(162,58,119,0.16907343294460642) 74%)",
       },
       colors: {
         border: "hsl(var(--border))",
