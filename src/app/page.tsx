@@ -10,126 +10,218 @@ import Link from "next/link";
 
 const Home = () => {
   const router = useRouter();
-  const contact = {
-    phone: "+38 (050) 123 45 67",
-    email: "+38 (050) 123 45 67",
-    website: "website.com",
-    location: "12345, Some st., New York, NY, United States",
-    imageUrl: "/images/jona2.jpg",
-    blackStripe: "/images/blackStripe.png",
-  };
-  const { phone, email, website, location } = contact;
+  // const contact = {
+  //   phone: "+38 (050) 123 45 67",
+  //   email: "+38 (050) 123 45 67",
+  //   website: "website.com",
+  //   location: "12345, Some st., New York, NY, United States",
+  //   imageUrl: "/images/jona2.jpg",
+  //   blackStripe: "/images/blackStripe.png",
+  // };
+  // const { phone, email, website, location } = contact;
 
-  const socialMedia = [
-    {
-      name: "instagram",
-      url: "https://instagram.com",
-      icon: icons.InstagramLogo,
-    },
-    {
-      name: "facebook",
-      url: "https://facebook.com",
-      icon: icons.FacebookLogo,
-    },
-    {
-      name: "linkedin",
-      url: "https://linkedin.com",
-      icon: icons.LinkedInLogo,
-    },
-    { name: "tiktok", url: "https://tiktok.com", icon: icons.TikTokLogo },
-  ];
+  // const socialMedia = [
+  //   {
+  //     name: "instagram",
+  //     url: "https://instagram.com",
+  //     icon: icons.InstagramLogo,
+  //   },
+  //   {
+  //     name: "facebook",
+  //     url: "https://facebook.com",
+  //     icon: icons.FacebookLogo,
+  //   },
+  //   {
+  //     name: "linkedin",
+  //     url: "https://linkedin.com",
+  //     icon: icons.LinkedInLogo,
+  //   },
+  //   { name: "tiktok", url: "https://tiktok.com", icon: icons.TikTokLogo },
+  // ];
 
-  const personalContact = [
-    { label: "Phone number", value: phone, icon: icons.PhoneVector },
-    { label: "Email", value: email, icon: icons.EmailVector },
-    {
-      label: "Website",
-      value: website,
-      isLink: true,
-      icon: icons.WebsiteVector,
-    },
-    {
-      label: "Location",
-      value: location,
-      icon: icons.LocationVector,
-    },
-  ];
+  // const personalContact = [
+  //   { label: "Phone number", value: phone, icon: icons.PhoneVector },
+  //   { label: "Email", value: email, icon: icons.EmailVector },
+  //   {
+  //     label: "Website",
+  //     value: website,
+  //     isLink: true,
+  //     icon: icons.WebsiteVector,
+  //   },
+  //   {
+  //     label: "Location",
+  //     value: location,
+  //     icon: icons.LocationVector,
+  //   },
+  // ];
+
+  // const cardIcon = [
+  //   { label: "WifiCardIcon", icon: icons.MobileSignalIcon },
+  //   { label: "WifiCardIcon", icon: icons.WifiCardIcon },
+  //   { label: "BatteryIcon", icon: icons.BatteryIcon },
+  // ];
+
+  // const templates = {
+  //   default: {
+  //     cnMainDiv:
+  //       "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-[#A23A77]",
+  //     cnImage: "/image/jona2.jpg",
+  //     cnCoverImage: "/image/jona2.jpg",
+  //     cnImageJane:
+  //       "w-[140px] h-[140px] absolute top-[76px] rounded-[24px] overflow-hidden left-1/2 -translate-x-1/2",
+  //     cnName:
+  //       " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[86px]",
+  //     cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[102px]",
+  //     cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+  //     cnButton:
+  //       " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+  //   },
+  //   template1: {
+  //     cnMainDiv:
+  //       "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient1 bgImg",
+  //     cnImageJane:
+  //       "w-[140px] h-[140px] absolute top-[120px] rounded-full border-[5px] overflow-hidden left-1/2 -translate-x-1/2",
+  //     cnName:
+  //       " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+  //     cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[234px]",
+  //     cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[0px] mx-5",
+  //     cnButton:
+  //       " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 py-3 pl-[102px] pr-[102px] text-5 font-bold",
+  //   },
+  //   template2: {
+  //     cnMainDiv:
+  //       "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient1 bgImg",
+  //     cnImageJane:
+  //       "w-[140px] h-[140px] absolute top-[120px] rounded-full border-[5px] overflow-hidden left-1/2 -translate-x-1/2",
+  //     cnName:
+  //       " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+  //     cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[234px]",
+  //     cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+  //     cnButton:
+  //       " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+  //   },
+  //   template3: {
+  //     cnMainDiv:
+  //       "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient2 joBack",
+  //     cnImageJane: null,
+  //     cnName:
+  //       " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+  //     cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[124px]",
+  //     cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+  //     cnButton:
+  //       " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[0px] py-3 px-[102px] text-5 font-bold",
+  //   },
+  //   template4: {
+  //     cnMainDiv:
+  //       "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-[#A23A77]",
+  //     cnImageJane: null,
+  //     cnName:
+  //       " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
+  //     cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[168px]",
+  //     cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
+  //     cnButton:
+  //       " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+  //   },
+  // };
+
+  // const createTemplate = templates.template3;
 
   const cardIcon = [
-    { label: "WifiCardIcon", icon: icons.MobileSignalIcon },
-    { label: "WifiCardIcon", icon: icons.WifiCardIcon },
-    { label: "BatteryIcon", icon: icons.BatteryIcon },
+    { label: "Signal", icon: icons.MobileSignalIcon },
+    { label: "Wifi", icon: icons.WifiCardIcon },
+    { label: "Battery", icon: icons.BatteryIcon },
   ];
 
-  const templates = {
-    default: {
-      cnMainDiv:
-        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-[#A23A77]",
-      cnImage: "/image/jona2.jpg",
-      cnCoverImage: "/image/jona2.jpg",
-      cnImageJane:
-        "w-[140px] h-[140px] absolute top-[76px] rounded-[24px] overflow-hidden left-1/2 -translate-x-1/2",
-      cnName:
-        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[86px]",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[102px]",
-      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
-      cnButton:
-        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+  const emeilSenderIcon = [
+    {
+      name: "CrossIcon",
+      icon: icons.CrossIcon,
     },
-    template1: {
-      cnMainDiv:
-        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient1 bgImg",
-      cnImageJane:
-        "w-[140px] h-[140px] absolute top-[120px] rounded-full border-[5px] overflow-hidden left-1/2 -translate-x-1/2",
-      cnName:
-        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[234px]",
-      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[0px] mx-5",
-      cnButton:
-        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 py-3 pl-[102px] pr-[102px] text-5 font-bold",
+    {
+      name: "PaperClipIcon",
+      icon: icons.PaperClipIcon,
     },
-    template2: {
-      cnMainDiv:
-        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient1 bgImg",
-      cnImageJane:
-        "w-[140px] h-[140px] absolute top-[120px] rounded-full border-[5px] overflow-hidden left-1/2 -translate-x-1/2",
-      cnName:
-        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[234px]",
-      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
-      cnButton:
-        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+    {
+      name: "ArrowSendIcon",
+      icon: icons.ArrowSendIcon,
     },
-    template3: {
-      cnMainDiv:
-        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-gradient2 joBack",
-      cnImageJane: null,
-      cnName:
-        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[124px]",
-      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
-      cnButton:
-        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[0px] py-3 px-[102px] text-5 font-bold",
+    {
+      name: "ThreeDotsIcon",
+      icon: icons.ThreeDotsIcon,
     },
-    template4: {
-      cnMainDiv:
-        "relative max-w-sm mx-auto h-full my-12 shadow-md text-center bg-[#A23A77]",
-      cnImageJane: null,
-      cnName:
-        " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[24px] mx-5 mt-[168px]",
-      cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
-      cnButton:
-        " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
+    {
+      name: "TickIcon",
+      icon: icons.TickIcon,
     },
-  };
-
-  const createTemplate = templates.template3;
-
+  ];
   return (
-    <main className=" mx-auto w-full ">
-      <div className={cn(createTemplate.cnMainDiv)}>
-        {/* Head of card */}
+    <main className=" mx-auto w-[full] ">
+      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-white">
+        {/*  */}
+        <div className="pl-6 pr-4 py-3 flex items-center justify-between">
+          <p className="text-start text-black text-[15px]">9:41</p>
+          <div className="top-0 absolute left-1/2 -translate-x-1/2">
+            <Image
+              src="/images/blackStripe.png"
+              width={219}
+              height={30}
+              alt="Black Stripe"
+            />
+          </div>
+          <ul className="flex gap-1 items-center stroke-black fill-black">
+            {cardIcon.map((item, index) => (
+              <li key={index}>
+                <Icon name={item.icon} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Icons: close,add,send */}
+        <div>
+          <ul className="flex gap-1 items-center stroke-black fill-black mt-2 mb-2">
+            {emeilSenderIcon.map((item, index) => (
+              <li key={index}>
+                <Icon name={item.icon} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/*List sender */}
+        <div className="px-4 py-4">
+          <p className="text-gray-500 text-[12px] pb-2 border-b border-gray-200">
+            YourCompany
+            <span className="text-[14px] text-black pl-2">Email@gmail.com</span>
+          </p>
+          <p className="text-gray-500 text-[12px] pb-2 mt-2 border-b border-gray-200 ">
+            From
+            <span className="text-[14px] text-black pl-2">
+              InterestedClient@gmail.com
+            </span>
+          </p>
+          <p className="text-black text-[15px] pb-2 mt-4 border-b border-gray-200">
+            That amazing offer
+          </p>
+          <p className="text-black text-[15px] mt-4 whitespace-pre-wrap">
+            Hey!
+            <br />
+            Texting you about that amazing offer you put up. I’m very
+            interested, could we schedule a call to discuss it?
+          </p>
+        </div>
+
+        {/*Fotter */}
+        <div className="bottom-0 absolute mb-[10px] left-1/2 -translate-x-1/2">
+          <Image
+            src="/images/LineBt.png"
+            width={139}
+            height={5}
+            alt="Line Fotter "
+          />
+        </div>
+      </div>
+      {/* <div className={cn(createTemplate.cnMainDiv)}>
         <div>
           <div className="pl-6 pr-4 py-3 flex items-center justify-between">
             <p className="text-start text-[#FFFFFF] text-[15px]">9:41</p>
@@ -142,7 +234,6 @@ const Home = () => {
               />
             </div>
 
-            {/* List of card icon */}
             <ul className="flex gap-1 items-center">
               {cardIcon.map((item, index) => (
                 <li key={index} className="">
@@ -165,7 +256,6 @@ const Home = () => {
             </div>
           )}
 
-        {/* Info Block */}
         <div className={cn(createTemplate.cnInfoBlock)}>
           <h1 className={cn(createTemplate.cnName)}>Jane Austin</h1>
           <h2 className="text-[14px] text-[#707087]">CEO at Hogwarts</h2>
@@ -189,7 +279,6 @@ const Home = () => {
           </ul>
         </div>
 
-        {/* Social madia Block */}
         <div className={cn(createTemplate.cnSocialMedia)}>
           <p className="text-[#A23A77] text-5 pt-5 px-[118px]">Social media</p>
           <div className="flex gap-2 px-[28px] pt-4 pb-8">
@@ -211,7 +300,7 @@ const Home = () => {
         <button className={cn(createTemplate.cnButton)}>
           Save contact data
         </button>
-      </div>
+      </div> */}
     </main>
   );
 };

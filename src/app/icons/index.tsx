@@ -43,6 +43,11 @@ import LocationVector from "./LocationVector";
 import BatteryIcon from "./BatteryIcon";
 import WifiCardIcon from "./WifiCardIcon";
 import MobileSignalIcon from "./MobileSignalIcon";
+import TickIcon from "./TickIcon";
+import ThreeDotsIcon from "./ThreeDotsIcon";
+import ArrowSendIcon from "./ArrowSendIcon";
+import PaperClipIcon from "./PaperClipIcon";
+import CrossIcon from "./CrossIcon";
 
 export {
   ActionDotsIcon,
@@ -89,4 +94,9 @@ export {
   BatteryIcon,
   WifiCardIcon,
   MobileSignalIcon,
+  TickIcon,
+  ThreeDotsIcon,
+  ArrowSendIcon,
+  PaperClipIcon,
+  CrossIcon,
 };
