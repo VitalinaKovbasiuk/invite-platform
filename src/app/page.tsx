@@ -106,7 +106,7 @@ const Home = () => {
       cnImageJane: null,
       cnName:
         " text-2xl text-[#A23A77] font-bold text-[24px] pb-[4px] pt-[24px]",
-      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[168px]",
+      cnInfoBlock: " bg-white mb-[16px] rounded-[0px] mx-5 mt-[124px]",
       cnSocialMedia: "mt-2 h-[152px] bg-white rounded-[24px] mx-5",
       cnButton:
         " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[0px] py-3 px-[102px] text-5 font-bold",
