@@ -10,6 +10,8 @@ import Link from "next/link";
 
 const Home = () => {
   const router = useRouter();
+
+  //   /* Section vCard plus */
   // const contact = {
   //   phone: "+38 (050) 123 45 67",
   //   email: "+38 (050) 123 45 67",
@@ -19,7 +21,6 @@ const Home = () => {
   //   blackStripe: "/images/blackStripe.png",
   // };
   // const { phone, email, website, location } = contact;
-
   // const socialMedia = [
   //   {
   //     name: "instagram",
@@ -38,7 +39,6 @@ const Home = () => {
   //   },
   //   { name: "tiktok", url: "https://tiktok.com", icon: icons.TikTokLogo },
   // ];
-
   // const personalContact = [
   //   { label: "Phone number", value: phone, icon: icons.PhoneVector },
   //   { label: "Email", value: email, icon: icons.EmailVector },
@@ -54,13 +54,11 @@ const Home = () => {
   //     icon: icons.LocationVector,
   //   },
   // ];
-
   // const cardIcon = [
   //   { label: "WifiCardIcon", icon: icons.MobileSignalIcon },
   //   { label: "WifiCardIcon", icon: icons.WifiCardIcon },
   //   { label: "BatteryIcon", icon: icons.BatteryIcon },
   // ];
-
   // const templates = {
   //   default: {
   //     cnMainDiv:
@@ -123,20 +121,15 @@ const Home = () => {
   //       " bg-[#FFD3D7] mt-4 mb-[32px] text-gray-800 rounded-[24px] py-3 px-[102px] text-5 font-bold",
   //   },
   // };
-
   // const createTemplate = templates.template3;
 
+  //   /* Section email */
   const cardIcon = [
     { label: "Signal", icon: icons.MobileSignalIcon },
     { label: "Wifi", icon: icons.WifiCardIcon },
     { label: "Battery", icon: icons.BatteryIcon },
   ];
-
   const emeilSenderIcon = [
-    {
-      name: "CrossIcon",
-      icon: icons.CrossIcon,
-    },
     {
       name: "PaperClipIcon",
       icon: icons.PaperClipIcon,
@@ -149,15 +142,12 @@ const Home = () => {
       name: "ThreeDotsIcon",
       icon: icons.ThreeDotsIcon,
     },
-    {
-      name: "TickIcon",
-      icon: icons.TickIcon,
-    },
   ];
+
   return (
     <main className=" mx-auto w-[full] ">
+      {/* Preview Section email */}
       <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-white">
-        {/*  */}
         <div className="pl-6 pr-4 py-3 flex items-center justify-between">
           <p className="text-start text-black text-[15px]">9:41</p>
           <div className="top-0 absolute left-1/2 -translate-x-1/2">
@@ -168,18 +158,19 @@ const Home = () => {
               alt="Black Stripe"
             />
           </div>
-          <ul className="flex gap-1 items-center stroke-black fill-black">
+          <ul className="flex gap-1 items-center">
             {cardIcon.map((item, index) => (
               <li key={index}>
-                <Icon name={item.icon} />
+                <Icon name={item.icon} className="primary" />
               </li>
             ))}
           </ul>
         </div>
-
-        {/* Icons: close,add,send */}
-        <div>
-          <ul className="flex gap-1 items-center stroke-black fill-black mt-2 mb-2">
+        <div className="flex justify-between gap-4 items-center pl-4 pr-4 pt-4 pb-4">
+          <p>
+            <Icon name={icons.CrossIcon} />
+          </p>
+          <ul className=" flex gap-8 items-center mt-2 mb-2">
             {emeilSenderIcon.map((item, index) => (
               <li key={index}>
                 <Icon name={item.icon} />
@@ -187,20 +178,22 @@ const Home = () => {
             ))}
           </ul>
         </div>
-
-        {/*List sender */}
         <div className="px-4 py-4">
-          <p className="text-gray-500 text-[12px] pb-2 border-b border-gray-200">
+          <p className="text-gray-500 text-[14px] pb-4 border-b border-gray-200">
             YourCompany
             <span className="text-[14px] text-black pl-2">Email@gmail.com</span>
           </p>
-          <p className="text-gray-500 text-[12px] pb-2 mt-2 border-b border-gray-200 ">
-            From
-            <span className="text-[14px] text-black pl-2">
-              InterestedClient@gmail.com
-            </span>
-          </p>
-          <p className="text-black text-[15px] pb-2 mt-4 border-b border-gray-200">
+          <div className="flex border-b border-gray-200 justify-between items-center">
+            <p className="text-gray-500 text-[14px] pb-4 mt-2 pt-1">
+              From
+              <span className="text-[14px] text-black pl-3">
+                InterestedClient@gmail.com
+              </span>
+            </p>
+            <Icon name={icons.TickIcon} className="mr-2" />
+          </div>
+
+          <p className="text-black text-[15px] pb-4 mt-4 border-b border-gray-200">
             That amazing offer
           </p>
           <p className="text-black text-[15px] mt-4 whitespace-pre-wrap">
@@ -210,8 +203,6 @@ const Home = () => {
             interested, could we schedule a call to discuss it?
           </p>
         </div>
-
-        {/*Fotter */}
         <div className="bottom-0 absolute mb-[10px] left-1/2 -translate-x-1/2">
           <Image
             src="/images/LineBt.png"
@@ -221,6 +212,8 @@ const Home = () => {
           />
         </div>
       </div>
+
+      {/*Preview Section vCard plus */}
       {/* <div className={cn(createTemplate.cnMainDiv)}>
         <div>
           <div className="pl-6 pr-4 py-3 flex items-center justify-between">
