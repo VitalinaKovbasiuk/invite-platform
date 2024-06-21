@@ -33,7 +33,10 @@ const config = {
           " linear-gradient(0deg, rgba(162,58,119,1) 75%, rgba(162,58,119,0) 90%)",
         gradientPdfPreview:
           " linear-gradient(180deg, rgba(255,211,215,1) 50%, rgba(255,255,255,1) 50%)",
+        gradientImegesPreview:
+          " linear-gradient(180deg, rgba(39,100,53,1) 50%, rgba(255,255,255,1) 50%)",
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

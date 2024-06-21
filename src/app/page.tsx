@@ -145,6 +145,13 @@ const Home = () => {
   // ];
 
   //   /* Section PDF */
+  // const cardIcon = [
+  //   { label: "Signal", icon: icons.MobileSignalIcon },
+  //   { label: "Wifi", icon: icons.WifiCardIcon },
+  //   { label: "Battery", icon: icons.BatteryIcon },
+  // ];
+
+  //   /* Section Images */
   const cardIcon = [
     { label: "Signal", icon: icons.MobileSignalIcon },
     { label: "Wifi", icon: icons.WifiCardIcon },
@@ -153,8 +160,61 @@ const Home = () => {
 
   return (
     <main className=" mx-auto w-[full] ">
+      {/* Preview Section Images */}
+      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientImegesPreview">
+        <div className="pl-6 pr-4 py-3 flex items-center justify-between">
+          <p className="text-start text-[#FFFFFF] text-[15px]">9:41</p>
+          <div className="top-0 absolute left-1/2 -translate-x-1/2">
+            <Image
+              src="/images/blackStripe.png"
+              width={219}
+              height={30}
+              alt="Black Image"
+            />
+          </div>
+          <ul className="flex gap-1 items-center">
+            {cardIcon.map((item, index) => (
+              <li key={index} className="">
+                <Icon name={item.icon} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-[320px] h-[124px] mt-[40px] ml-[36px] mr-[36px] text-center">
+          <h1 className="text-[28px] font-proximaSemibolt pb-[8px] text-white">
+            Photos
+          </h1>
+          <p className="text-[16px] font-proximaRegular pb-[24px]  text-white">
+            Check out the photos of nature I took during my hike!
+          </p>
+          <p className="text-white text-center flex items-center text-[16px] font-proximaRegular ml-[81px]">
+            <Icon name={icons.GlobeIcon} className="stroke-white" />
+            <span className="ml-2">www.website.com</span>
+          </p>
+        </div>
+        <div className="mt-8 w-full flex flex-col items-center space-y-4">
+          <Image
+            src="/images/SectinRrePhoto1.jpg"
+            width={350}
+            height={200}
+            alt="Nature Photo 1"
+            className="rounded-[24px]"
+          />
+          <Image
+            src="/images/SectinRrePhoto2.jpg"
+            width={350}
+            height={200}
+            alt="Nature Photo 2"
+            className="rounded-[24px]"
+          />
+        </div>
+        <button className="absolute bottom-[88px] bg-[#276435] mt-20 ml-[20px] text-white rounded-[24px] pt-[9px] pb-[9px] pl-[105px] pr-[105px] text-[20px] font-proximaButton font-bold ">
+          View all photos
+        </button>
+      </div>
+
       {/* Preview Section PDF */}
-      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientPdfPreview">
+      {/* <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientPdfPreview">
         <div className="pl-6 pr-4 py-3 flex items-center justify-between ">
           <p className="text-start text-black text-[15px]">9:41</p>
           <div className="top-0 absolute left-1/2 -translate-x-1/2">
@@ -193,7 +253,7 @@ const Home = () => {
         <button className="absolute bottom-[150px] bg-[#FFD3D7] mt-20 ml-[20px] text-gray-800 rounded-[24px] pt-[9px] pb-[9px] pl-[130px] pr-[130px] text-[20px] font-proximaButton font-bold ">
           View PDF
         </button>
-      </div>
+      </div> */}
 
       {/* Preview Section email */}
       {/* <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-white">
