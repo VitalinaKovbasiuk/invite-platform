@@ -124,30 +124,79 @@ const Home = () => {
   // const createTemplate = templates.template3;
 
   //   /* Section email */
+  // const cardIcon = [
+  //   { label: "Signal", icon: icons.MobileSignalIcon },
+  //   { label: "Wifi", icon: icons.WifiCardIcon },
+  //   { label: "Battery", icon: icons.BatteryIcon },
+  // ];
+  // const emeilSenderIcon = [
+  //   {
+  //     name: "PaperClipIcon",
+  //     icon: icons.PaperClipIcon,
+  //   },
+  //   {
+  //     name: "ArrowSendIcon",
+  //     icon: icons.ArrowSendIcon,
+  //   },
+  //   {
+  //     name: "ThreeDotsIcon",
+  //     icon: icons.ThreeDotsIcon,
+  //   },
+  // ];
+
+  //   /* Section PDF */
   const cardIcon = [
     { label: "Signal", icon: icons.MobileSignalIcon },
     { label: "Wifi", icon: icons.WifiCardIcon },
     { label: "Battery", icon: icons.BatteryIcon },
   ];
-  const emeilSenderIcon = [
-    {
-      name: "PaperClipIcon",
-      icon: icons.PaperClipIcon,
-    },
-    {
-      name: "ArrowSendIcon",
-      icon: icons.ArrowSendIcon,
-    },
-    {
-      name: "ThreeDotsIcon",
-      icon: icons.ThreeDotsIcon,
-    },
-  ];
 
   return (
     <main className=" mx-auto w-[full] ">
+      {/* Preview Section PDF */}
+      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientPdfPreview">
+        <div className="pl-6 pr-4 py-3 flex items-center justify-between ">
+          <p className="text-start text-black text-[15px]">9:41</p>
+          <div className="top-0 absolute left-1/2 -translate-x-1/2">
+            <Image
+              src="/images/blackStripe.png"
+              width={219}
+              height={30}
+              alt="Black Stripe"
+            />
+          </div>
+          <ul className="flex gap-1 items-center">
+            {cardIcon.map((item, index) => (
+              <li key={index}>
+                <Icon name={item.icon} className="primary" />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-[273px h-[76px] mt-[66px] ml-[60px] mr-[60px] text-center">
+          <p className="text-[28px] font-proximaSemibolt pb-[8px]">
+            My summer wardrobe
+          </p>
+          <p className="text-[16px] font-proximaRegular">
+            Check out my outfits. <br />
+            Let me know what you think!
+          </p>
+        </div>
+        <Image
+          src="/images/PreviewPdfImage.jpg"
+          width={280}
+          height={360}
+          alt="PDF Image"
+          className="rounded-[24px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
+        />
+
+        <button className="absolute bottom-[150px] bg-[#FFD3D7] mt-20 ml-[20px] text-gray-800 rounded-[24px] pt-[9px] pb-[9px] pl-[130px] pr-[130px] text-[20px] font-proximaButton font-bold ">
+          View PDF
+        </button>
+      </div>
+
       {/* Preview Section email */}
-      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-white">
+      {/* <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-white">
         <div className="pl-6 pr-4 py-3 flex items-center justify-between">
           <p className="text-start text-black text-[15px]">9:41</p>
           <div className="top-0 absolute left-1/2 -translate-x-1/2">
@@ -211,7 +260,7 @@ const Home = () => {
             alt="Line Fotter "
           />
         </div>
-      </div>
+      </div> */}
 
       {/*Preview Section vCard plus */}
       {/* <div className={cn(createTemplate.cnMainDiv)}>

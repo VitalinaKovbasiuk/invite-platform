@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        proximaSemibolt: ["Proxima Nova", "semibold"],
+        proximaRegular: ["Proxima Nova", "regular"],
+        proximaButton: ["Proxima Nova", "bold"],
+      },
       backgroundImage: {
         bgCloud: "url('/images/bgCloud.jpg')",
         joBack: "url('/images/joBack.jpg')",
@@ -26,6 +31,8 @@ const config = {
           "linear-gradient(180deg, rgba(255,0,232,0) 17%, rgba(162,58,119,1) 16%)",
         gradient2:
           " linear-gradient(0deg, rgba(162,58,119,1) 75%, rgba(162,58,119,0) 90%)",
+        gradientPdfPreview:
+          " linear-gradient(180deg, rgba(255,211,215,1) 50%, rgba(255,255,255,1) 50%)",
       },
       colors: {
         border: "hsl(var(--border))",
