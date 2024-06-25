@@ -34,7 +34,7 @@ const config = {
         gradientPdfPreview:
           " linear-gradient(180deg, rgba(255,211,215,1) 50%, rgba(255,255,255,1) 50%)",
         gradientImegesPreview:
-          " linear-gradient(180deg, rgba(39,100,53,1) 50%, rgba(255,255,255,1) 50%)",
+          " linear-gradient(180deg, rgba(39,100,53,1) 45%, rgba(255,255,255,1) 35%)",
       },
 
       colors: {

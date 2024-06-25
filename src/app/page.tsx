@@ -123,7 +123,7 @@ const Home = () => {
   // };
   // const createTemplate = templates.template3;
 
-  //   /* Section email */
+  /* Section email */
   // const cardIcon = [
   //   { label: "Signal", icon: icons.MobileSignalIcon },
   //   { label: "Wifi", icon: icons.WifiCardIcon },
@@ -180,7 +180,7 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        <div className="w-[320px] h-[124px] mt-[40px] ml-[36px] mr-[36px] text-center">
+        <div className="w-[320px] h-[124px] mt-[40px] ml-[36px] mr-[36px] text-center mb-[60px]">
           <h1 className="text-[28px] font-proximaSemibolt pb-[8px] text-white">
             Photos
           </h1>
@@ -192,7 +192,7 @@ const Home = () => {
             <span className="ml-2">www.website.com</span>
           </p>
         </div>
-        <div className="mt-8 w-full flex flex-col items-center space-y-4">
+        <div className=" w-full flex flex-col items-center space-y-4">
           <Image
             src="/images/SectinRrePhoto1.jpg"
             width={350}
