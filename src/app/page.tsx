@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import Icon from "@/components/IconComponent ";
 import * as icons from "./icons";
 import Link from "next/link";
+import { Input } from "postcss";
 
 const Home = () => {
   const router = useRouter();
@@ -152,16 +153,138 @@ const Home = () => {
   // ];
 
   //   /* Section Images */
+  // const cardIcon = [
+  //   { label: "Signal", icon: icons.MobileSignalIcon },
+  //   { label: "Wifi", icon: icons.WifiCardIcon },
+  //   { label: "Battery", icon: icons.BatteryIcon },
+  // ];
+
+  //   /* Section Whatsapp */
   const cardIcon = [
     { label: "Signal", icon: icons.MobileSignalIcon },
     { label: "Wifi", icon: icons.WifiCardIcon },
     { label: "Battery", icon: icons.BatteryIcon },
   ];
 
+  const whatsappSenderIcon = [
+    {
+      name: "VideoCallIcon",
+      icon: icons.VideoCallIcon,
+    },
+    {
+      name: "CallIconPreview",
+      icon: icons.CallIconPreview,
+    },
+  ];
+
+  const whatsappButtonIcon = [
+    {
+      name: "CameraIcon",
+      icon: icons.CameraIcon,
+    },
+    {
+      name: "RecordAudioIcon",
+      icon: icons.RecordAudioIcon,
+    },
+  ];
+
   return (
     <main className=" mx-auto w-[full] ">
+      {/* Preview Section Whatsapp */}
+      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md">
+        <div className="pl-6 pr-4 py-3 flex items-center justify-between">
+          <p className="text-start text-black text-[15px]">9:41</p>
+          <div className="top-0 absolute left-1/2 -translate-x-1/2">
+            <Image
+              src="/images/blackStripe.png"
+              width={219}
+              height={30}
+              alt="Black Image"
+            />
+          </div>
+          <ul className="flex gap-1 items-center">
+            {cardIcon.map((item, index) => (
+              <li key={index} className="">
+                <Icon name={item.icon} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Oppizi Sector */}
+        <div className="flex justify-between gap-4 items-center pl-[9px] pr-[20px]">
+          <div className="flex items-center ">
+            <Icon name={icons.ArrovBackIcomPreview} className="primary" />
+            <Image
+              src="/images/PreviewsTemplates/PreviewWhatsapp/logoOppizi.png"
+              width={37}
+              height={37}
+              alt="Oppizi Logo"
+              className="ml-[43px] mr-2"
+            />
+            <div>
+              <p className="text-black text-[16px]">Oppizi</p>
+              <span className="text-[12px] text-gray-500 ">
+                tap here for contact info
+              </span>
+            </div>
+          </div>
+          <ul className="flex gap-[26px] items-center pt-2 pb-2">
+            {whatsappSenderIcon.map((item, index) => (
+              <li key={index}>
+                <Icon name={item.icon} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* BgImage + text */}
+        <div className="h-[670px] bg-bgPreviewWhatsapp bg-cover p-4 ">
+          <p className="text-[#3C3C43] text-[12px] text-center bg-[#DDDDE9] rounded-full w-[104px] h-[21px] mb-4 absolute bottom-[164px] right-[140px]">
+            Fri, Jun 26
+          </p>
+          <div className="bg-bgPreviewWhatsappShape w-[214px] h-[75px] pl-2 absolute bottom-[90px] right-[10px]">
+            <p className="text-black text-[15px] mb-2 pr-[40px] pt-[7px] ">
+              Hi! Could you tell me more about your offer?
+            </p>
+            <p className="text-gray-500 text-[12px] flex items-center justify-end mr-[18px]">
+              11:50
+              <Icon name={icons.ReadIconPreview} className="primary" />
+            </p>
+          </div>
+        </div>
+
+        {/* whatsappButtonIcon */}
+        <div className="flex justify-between items-center pl-[14px] pr-[18px]">
+          <Icon name={icons.AddPlus} className="fill-[#007AFF]" />
+          <input
+            type="text"
+            className=" rounded-full border border-[#8E8E93] mt-[7px]"
+            placeholder=""
+          />
+          <Icon name={icons.StickerIconPreview} />
+          <ul className="flex gap-6 pt-[12px]">
+            {whatsappButtonIcon.map((item, index) => (
+              <li key={index}>
+                <Icon name={item.icon} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* line */}
+        <div className="bottom-0 absolute mb-[10px] left-1/2 -translate-x-1/2">
+          <Image
+            src="/images/LineBt.png"
+            width={139}
+            height={5}
+            alt="Line Footer"
+          />
+        </div>
+      </div>
+
       {/* Preview Section Images */}
-      <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientImegesPreview">
+      {/* <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientImegesPreview">
         <div className="pl-6 pr-4 py-3 flex items-center justify-between">
           <p className="text-start text-[#FFFFFF] text-[15px]">9:41</p>
           <div className="top-0 absolute left-1/2 -translate-x-1/2">
@@ -211,7 +334,7 @@ const Home = () => {
         <button className="absolute bottom-[88px] bg-[#276435] mt-20 ml-[20px] text-white rounded-[24px] pt-[9px] pb-[9px] pl-[105px] pr-[105px] text-[20px] font-proximaButton font-bold ">
           View all photos
         </button>
-      </div>
+      </div> */}
 
       {/* Preview Section PDF */}
       {/* <div className="relative max-w-sm mx-auto h-[844px] my-12 shadow-md bg-gradientPdfPreview">

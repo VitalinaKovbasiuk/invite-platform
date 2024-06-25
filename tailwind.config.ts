@@ -24,9 +24,14 @@ const config = {
         proximaButton: ["Proxima Nova", "bold"],
       },
       backgroundImage: {
-        bgCloud: "url('/images/bgCloud.jpg')",
-        joBack: "url('/images/joBack.jpg')",
-        ava: "url('/images/jona2.jpg')",
+        bgCloud:
+          "url('/images/PreviewsTemplates/PreviewVCardPlus/bgCloud.jpg')",
+        joBack: "url('/images/PreviewsTemplates/PreviewVCardPlus/joBack.jpg')",
+        ava: "url('/images/PreviewsTemplates/PreviewVCardPlus/jona2.jpg')",
+        bgPreviewWhatsapp:
+          "url('/images/PreviewsTemplates/PreviewWhatsapp/bgImage.jpg')",
+        bgPreviewWhatsappShape:
+          "url('/images/PreviewsTemplates/PreviewWhatsapp/Shape.png')",
         gradient1:
           "linear-gradient(180deg, rgba(255,0,232,0) 17%, rgba(162,58,119,1) 16%)",
         gradient2:

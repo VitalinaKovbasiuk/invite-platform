@@ -48,6 +48,13 @@ import ThreeDotsIcon from "./ThreeDotsIcon";
 import ArrowSendIcon from "./ArrowSendIcon";
 import PaperClipIcon from "./PaperClipIcon";
 import CrossIcon from "./CrossIcon";
+import VideoCallIcon from "./VideoCallIcon";
+import ArrovBackIcomPreview from "./ArrovBackIcomPreview";
+import CallIconPreview from "./CallIconPreview";
+import ReadIconPreview from "./ReadIconPreview";
+import RecordAudioIcon from "./RecordAudioIcon";
+import CameraIcon from "./CameraIcon";
+import StickerIconPreview from "./StickerIconPreview";
 
 export {
   ActionDotsIcon,
@@ -99,4 +106,11 @@ export {
   ArrowSendIcon,
   PaperClipIcon,
   CrossIcon,
+  VideoCallIcon,
+  ArrovBackIcomPreview,
+  CallIconPreview,
+  ReadIconPreview,
+  RecordAudioIcon,
+  CameraIcon,
+  StickerIconPreview,
 };
