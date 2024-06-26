@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 const RecordAudioIcon = ({ className }: any) => {
   return (
     <svg
-      width="18"
-      height="25"
+      width="16"
+      height="24"
       viewBox="0 0 18 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

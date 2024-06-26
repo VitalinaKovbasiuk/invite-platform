@@ -220,7 +220,7 @@ const Home = () => {
               width={37}
               height={37}
               alt="Oppizi Logo"
-              className="ml-[43px] mr-2"
+              className="ml-[43px] mr-2 mb-2"
             />
             <div>
               <p className="text-black text-[16px]">Oppizi</p>
@@ -257,12 +257,17 @@ const Home = () => {
         {/* whatsappButtonIcon */}
         <div className="flex justify-between items-center pl-[14px] pr-[18px]">
           <Icon name={icons.AddPlus} className="fill-[#007AFF]" />
-          <input
-            type="text"
-            className=" rounded-full border border-[#8E8E93] mt-[7px]"
-            placeholder=""
-          />
-          <Icon name={icons.StickerIconPreview} />
+          <div className="relative flex items-center ">
+            <input
+              type="text"
+              className=" rounded-full border border-[#8E8E93] mt-[7px] pl-3 pr-[36px] "
+              placeholder=""
+            />
+            <Icon
+              name={icons.StickerIconPreview}
+              className="absolute top-1/2 right-4 transform -translate-y-1/2"
+            />
+          </div>
           <ul className="flex gap-6 pt-[12px]">
             {whatsappButtonIcon.map((item, index) => (
               <li key={index}>
